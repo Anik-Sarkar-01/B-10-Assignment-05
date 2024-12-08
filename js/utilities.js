@@ -1,11 +1,13 @@
 function getDonateAmountById(id) {
     const donateAmount = document.getElementById(id).value;
     const donateAmountNumber = parseFloat(donateAmount);
-    if ((donateAmountNumber < 0) || (isNaN(donateAmountNumber))) {
+    const totalMoneyOnAccount = getTotalMoneyOnAccountById("total-money-on-account");
+    if ((donateAmountNumber < 0) || (isNaN(donateAmountNumber)) || (donateAmount > totalMoneyOnAccount) || (typeof donateAmount === 'string') ) {
         alert('Invalid Donation Amount');
         return null;
     }
     else {
+        
         alert("Amount Added");
         return donateAmountNumber;
     }

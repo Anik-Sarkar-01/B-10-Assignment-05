@@ -87,10 +87,6 @@ document.getElementById('donate-btn-quota-movement').addEventListener('click', f
 
 })
 
-
-
-
-
 document.getElementById('history-btn').addEventListener('click', function () {
     const transactionHistoryPage = document.getElementById("transaction-history-page");
     transactionHistoryPage.classList.remove('hidden');
