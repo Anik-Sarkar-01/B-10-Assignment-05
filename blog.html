@@ -5,69 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <!-- css file -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- daisyUI css file + tailwind css cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body class="lexend-font">
-    <div class="navbar bg-orange-50 p-6">
-        <div class="navbar-start ">
-            <a id="home-btn" class="btn bg-lime-400">Home</a>
-        </div>
-        <div class="navbar-center flex items-center space-x-3">
-            <img src="./assets/logo.png" alt="logo of donate bangladesh">
-            <p class="font-bold">Donate Bangladesh</p>
-        </div>
-        <div class="navbar-end">
-            <img src="./assets/coin.png" alt="">
-            <p id="total-money-on-account" class="font-semibold text-gray-600">5500</p>
-        </div>
-
-    </div>
-
-    <section class="space-y-4 p-5">
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
-            <div class="collapse-content">
-                <p>The DOM is a programming interface for web documents. It represents the structure of a web page as a
-                    tree of objects that can be manipulated with code.</p>
+    <!-- header starts here -->
+    <header>
+        <!-- navbar starts here -->
+        <nav class="navbar bg-orange-50 p-6">
+            <div class="navbar-start ">
+                <a id="home-btn" class="btn btn-md  bg-lime-400 font-bold">Home</a>
             </div>
-        </div>
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
-            <div class="collapse-content">
-                <p>You can select an element from the DOM using methods like document.getElementById('elementId') ,
-                    document.querySelector('.className'), document.getElementsByClassName(elementClass) etc.</p>
+            <div class="navbar-center flex flex-col lg:flex-row justify-center items-center space-x-3">
+                <img class="w-2/12 lg:w-1/6" src="./assets/logo.png" alt="logo of donate bangladesh">
+                <p class="font-bold text-sm lg:text-lg">Donate Bangladesh</p>
             </div>
-        </div>
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why
-                is it useful?</div>
-            <div class="collapse-content">
-                <p>Event delegation is a technique where you attach a single event listener to a parent element to
-                    manage events for all its descendants. It's useful for handling events efficiently, especially in
-                    dynamically changing content.</p>
+            <div class="navbar-end flex flex-col lg:flex-row lg:space-x-2">
+                <img src="./assets/coin.png" alt="">
+                <p id="total-money-on-account" class="font-semibold text-gray-600">5500</p>
+                <span class="font-semibold text-gray-600">BDT</span>
             </div>
-        </div>
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
-                using the DOM?</div>
-            <div class="collapse-content">
-                <p>To manipulate an element's attributes using the DOM, you can use methods like
-                    setAttribute('attribute', 'value') to set a new attribute or change an existing one, and
-                    getAttribute('attribute') to retrieve the value of an attribute.
+        </nav>
+        <!-- navbar ends here -->
+    </header>
+    <!-- header ends here -->
 
-                    For styles, you can access and modify them by directly changing properties of the element's style
-                    attribute. For example, element.style.color = 'red' would change the text color to red.</p>
+    <!-- main starts here -->
+    <main>
+        <!-- faq section starts here -->
+        <section class="space-y-4 p-5">
+            <!-- question-01 starts here -->
+            <div class="collapse collapse-arrow bg-orange-50">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                    <p>The DOM is a programming interface for web documents. It represents the structure of a web page
+                        as a
+                        tree of objects that can be manipulated with code.</p>
+                </div>
             </div>
-        </div>
-    </section>
+            <!-- question-01 ends here -->
 
+            <!-- question-02 starts here -->
+            <div class="collapse collapse-arrow bg-orange-50">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                    <p>You can select an element from the DOM using methods like document.getElementById('elementId') ,
+                        document.querySelector('.className'), document.getElementsByClassName(elementClass) etc.</p>
+                </div>
+            </div>
+            <!-- question-02 ends here -->
+
+            <!-- question-03 starts here -->
+            <div class="collapse collapse-arrow bg-orange-50">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and
+                    why
+                    is it useful?</div>
+                <div class="collapse-content">
+                    <p>Event delegation is a technique where you attach a single event listener to a parent element to
+                        manage events for all its descendants. It's useful for handling events efficiently, especially
+                        in
+                        dynamically changing content.</p>
+                </div>
+            </div>
+            <!-- question-03 ends here -->
+
+            <!-- question-04 starts here -->
+            <div class="collapse collapse-arrow bg-orange-50">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
+                    using the DOM?</div>
+                <div class="collapse-content">
+                    <p>To manipulate an element's attributes using the DOM, you can use methods like
+                        setAttribute('attribute', 'value') to set a new attribute or change an existing one, and
+                        getAttribute('attribute') to retrieve the value of an attribute.
+
+                        For styles, you can access and modify them by directly changing properties of the element's
+                        style
+                        attribute. For example, element.style.color = 'red' would change the text color to red.</p>
+                </div>
+            </div>
+            <!-- question-04 ends here -->
+        </section>
+        <!-- faq section ends here -->
+    </main>
+    <!-- main starts here -->
+
+    <!-- home button functionality -->
     <script>
         document.getElementById('home-btn').addEventListener('click', function () {
             window.location.href = './index.html';
