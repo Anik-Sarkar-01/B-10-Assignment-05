@@ -1,5 +1,6 @@
 // card 1 functionality
 document.getElementById('donate-btn-noakhali').addEventListener('click', function () {
+    
     const donateAmount = getDonateAmountById('donate-amount-noakhali');
     const existingAmount = getExistingAmountById('total-amount-noakhali');
     const totalAmount = donateAmount + existingAmount;
