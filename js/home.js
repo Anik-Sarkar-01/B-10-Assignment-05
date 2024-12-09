@@ -11,7 +11,6 @@ document.getElementById('donate-btn-noakhali').addEventListener('click', functio
 
     if (donateAmount !== null) {
         const getTransactionHistoryPage = getTransactionHistoryPageById();
-        console.log(getTransactionHistoryPage);
         getTransactionHistoryPage.newDiv.innerHTML = `
         <div class="card bg-base-100 border border-gray-300 w-3/4 mx-auto">
             <div class="card-body">
@@ -71,7 +70,7 @@ document.getElementById('donate-btn-quota-movement').addEventListener('click', f
         getTransactionHistoryPage.newDiv.innerHTML = `
         <div class="card bg-base-100 border border-gray-300 w-3/4 mx-auto">
             <div class="card-body">
-               <p class="font-bold"> ${donateAmount}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+               <p class="font-bold"> ${donateAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
                <p> Date: ${getTransactionHistoryPage.currentDateTime}</p>
             </div>
         </div>

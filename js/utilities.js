@@ -1,9 +1,18 @@
 // common function to get the donation amount
 function getDonateAmountById(id) {
     const donateAmount = document.getElementById(id).value;
-    const donateAmountNumber = parseFloat(donateAmount);
+    function getValidDonationAmount() {
+        if (!isNaN(donateAmount)) {
+            const donateAmountInNumber = parseInt(donateAmount);
+            return donateAmountInNumber;
+        } else {
+            return null;
+        }
+    }
+
+    const donateAmountNumber = getValidDonationAmount();
     const totalMoneyOnAccount = getTotalMoneyOnAccountById("total-money-on-account");
-    if ((donateAmountNumber < 0) || (isNaN(donateAmountNumber)) || (donateAmount > totalMoneyOnAccount)) {
+    if ((donateAmountNumber < 1) || (isNaN(donateAmountNumber)) || (donateAmountNumber > totalMoneyOnAccount)) {
         alert('Invalid Donation Amount');
         return null;
     }
@@ -32,7 +41,7 @@ function getTransactionHistoryPageById() {
     const transactionHistoryPage = document.getElementById('transaction-history-page');
     let newDiv = document.createElement('div');
     let currentDateTime = new Date();
-    return { transactionHistoryPage, newDiv, currentDateTime}
+    return { transactionHistoryPage, newDiv, currentDateTime }
 }
 
 // common function for modal
