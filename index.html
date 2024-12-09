@@ -5,36 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <!-- css file -->
     <link rel="stylesheet" href="styles/styles.css">
+    <!-- daisyUI css file + tailwind css cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="lexend-font">
-
-    <section class="sticky top-0 z-50 backdrop-filter backdrop-blur-lg">
-        <div class="navbar bg-orange-50 p-6">
+    <!-- header starts here -->
+    <header class="sticky top-0 z-50 backdrop-filter backdrop-blur-lg">
+        <!-- navbar starts here -->
+        <nav class="navbar bg-orange-50 p-6">
             <div class="navbar-start ">
-                <a id="blog-btn" class="btn bg-lime-400">Blog</a>
+                <a id="blog-btn" class="btn bg-lime-400 font-bold">Blog</a>
             </div>
-            <div class="navbar-center flex items-center space-x-3">
-                <img src="./assets/logo.png" alt="logo of donate bangladesh">
-                <p class="font-bold">Donate Bangladesh</p>
+            <div class="navbar-center flex flex-col lg:flex-row justify-center items-center space-x-3">
+                <img class="w-2/12 lg:w-1/6" src="./assets/logo.png" alt="logo of donate bangladesh">
+                <p class="font-bold text-sm lg:text-lg">Donate Bangladesh</p>
             </div>
-            <div class="navbar-end">
+            <div class="navbar-end flex flex-col lg:flex-row lg:space-x-2">
                 <img src="./assets/coin.png" alt="">
                 <p id="total-money-on-account" class="font-semibold text-gray-600">5500</p>
+                <span class="font-semibold text-gray-600">BDT</span>
             </div>
+        </nav>
+        <!-- navbar ends here -->
 
-        </div>
-
-        <div class="lg:flex justify-center items-center gap-5 mt-12 mb-8 p-4">
+        <!-- banner starts here -->
+        <div class="flex justify-center items-center gap-5 mt-12 mb-8">
             <a id="donation-btn" class="btn btn-outline bg-lime-400">Donation</a>
             <a id="history-btn" class="btn btn-outline">History</a>
         </div>
-    </section>
+        <!-- banner ends here -->
+    </header>
+    <!-- header ends here -->
 
-
+    <!-- main starts here -->
     <section id="cards-section" class="space-y-7 mb-16">
         <div class="card lg:card-side items-center mx-auto bg-base-100 w-3/4 border border-gray-300 p-8">
             <div class="w-1/2">
@@ -119,10 +128,11 @@
             <img class="mx-auto my-0" src="./assets/coin.png" alt="">
             <p>You Have Donated for Humankind</p>
             <span class="font-bold text-xl block">Successfully</span>
-            
+
             <button id="closeModal" class="btn btn-active font-bold">Close Confirmation</button>
         </div>
     </section>
+    <!-- main ends here -->
 
 
     <footer class="footer bg-orange-50 h-28">
