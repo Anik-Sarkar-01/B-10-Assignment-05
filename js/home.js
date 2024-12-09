@@ -69,7 +69,7 @@ document.getElementById('donate-btn-quota-movement').addEventListener('click', f
         getTransactionHistoryPage.newDiv.innerHTML = `
         <div class="card bg-base-100 border border-gray-300 w-3/4 mx-auto">
             <div class="card-body">
-               <p class="font-bold"> ${donateAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+               <p class="font-bold"> ${donateAmount}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
                <p> Date: ${getTransactionHistoryPage.currentDateTime}</p>
             </div>
         </div>
@@ -81,8 +81,11 @@ document.getElementById('donate-btn-quota-movement').addEventListener('click', f
 })
 
 document.getElementById('history-btn').addEventListener('click', function () {
-    document.getElementById('donation-btn').classList.remove('bg-lime-400');
+    document.getElementById('donation-btn').classList.remove('bg-lime-400', 'border-gray-400');
     document.getElementById('history-btn').classList.add('bg-lime-400');
+    document.getElementById('history-btn').classList.remove('border-gray-400');
+    document.getElementById('donation-btn').classList.add('border-gray-400');
+
 
     const transactionHistoryPage = document.getElementById("transaction-history-page");
     transactionHistoryPage.classList.remove('hidden');
@@ -93,6 +96,9 @@ document.getElementById('history-btn').addEventListener('click', function () {
 document.getElementById("donation-btn").addEventListener('click', function () {
     document.getElementById('donation-btn').classList.add('bg-lime-400');
     document.getElementById('history-btn').classList.remove('bg-lime-400');
+    document.getElementById('donation-btn').classList.remove('border-gray-400');
+    document.getElementById('history-btn').classList.add('border-gray-400');
+
 
     const transactionHistoryPage = document.getElementById("transaction-history-page");
     transactionHistoryPage.classList.add('hidden');
