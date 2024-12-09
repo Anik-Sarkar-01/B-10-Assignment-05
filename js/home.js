@@ -8,30 +8,21 @@ document.getElementById('donate-btn-noakhali').addEventListener('click', functio
     const totalMoneyOnAccountAfterDonation = totalMoneyOnAccount - donateAmount;
     document.getElementById('total-money-on-account').innerText = totalMoneyOnAccountAfterDonation;
 
-    console.log(donateAmount);
-
     if (donateAmount !== null) {
-        const transactionHistoryPage = document.getElementById('transaction-history-page');
-        let newDiv = document.createElement('div');
-
-        let currentDateTime = new Date();
-        let dateTimeString = currentDateTime.toLocaleString();
-        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-        newDiv.innerHTML = `
+        const getTransactionHistoryPage = getTransactionHistoryPageById();
+        console.log(getTransactionHistoryPage);
+        getTransactionHistoryPage.newDiv.innerHTML = `
         <div class="card bg-base-100 border border-gray-300 w-3/4 mx-auto">
             <div class="card-body">
                <p class="font-bold"> ${donateAmount} Taka is Donated for Flood-2024 at Noakhali, Bangladesh</p>
-               <p> Date: ${dateTimeString} (${timeZone}) </p>
+               <p> Date: ${getTransactionHistoryPage.currentDateTime}</p>
             </div>
         </div>
     `
-        transactionHistoryPage.appendChild(newDiv);
+        getTransactionHistoryPage.transactionHistoryPage.appendChild(getTransactionHistoryPage.newDiv);
 
         getModalById('modal');
-
     }
-
 })
 
 document.getElementById('donate-btn-feni').addEventListener('click', function () {
@@ -44,27 +35,21 @@ document.getElementById('donate-btn-feni').addEventListener('click', function ()
     const totalMoneyOnAccountAfterDonation = totalMoneyOnAccount - donateAmount;
     document.getElementById('total-money-on-account').innerText = totalMoneyOnAccountAfterDonation;
 
-    const transactionHistoryPage = document.getElementById('transaction-history-page');
-    let newDiv = document.createElement('div');
-
-
-    let currentDateTime = new Date();
-    let dateTimeString = currentDateTime.toLocaleString();
-    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-
-
-    newDiv.innerHTML = `
+    if (donateAmount !== null) {
+        const getTransactionHistoryPage = getTransactionHistoryPageById();
+        console.log(getTransactionHistoryPage);
+        getTransactionHistoryPage.newDiv.innerHTML = `
         <div class="card bg-base-100 border border-gray-300 w-3/4 mx-auto">
             <div class="card-body">
                <p class="font-bold"> ${donateAmount} Taka is Donated for Flood Relief in Feni, Bangladesh</p>
-               <p> Date: ${dateTimeString} (${timeZone}) </p>
+               <p> Date: ${getTransactionHistoryPage.currentDateTime}</p>
             </div>
         </div>
     `
-    transactionHistoryPage.appendChild(newDiv);
+        getTransactionHistoryPage.transactionHistoryPage.appendChild(getTransactionHistoryPage.newDiv);
 
-    getModalById('modal');
+        getModalById('modal');
+    }
 })
 
 
@@ -78,24 +63,21 @@ document.getElementById('donate-btn-quota-movement').addEventListener('click', f
     const totalMoneyOnAccountAfterDonation = totalMoneyOnAccount - donateAmount;
     document.getElementById('total-money-on-account').innerText = totalMoneyOnAccountAfterDonation;
 
-    const transactionHistoryPage = document.getElementById('transaction-history-page');
-    let newDiv = document.createElement('div');
-
-    let currentDateTime = new Date();
-    let dateTimeString = currentDateTime.toLocaleString();
-    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-    newDiv.innerHTML = `
+    if (donateAmount !== null) {
+        const getTransactionHistoryPage = getTransactionHistoryPageById();
+        console.log(getTransactionHistoryPage);
+        getTransactionHistoryPage.newDiv.innerHTML = `
         <div class="card bg-base-100 border border-gray-300 w-3/4 mx-auto">
             <div class="card-body">
                <p class="font-bold"> ${donateAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
-               <p> Date: ${dateTimeString} (${timeZone}) </p>
+               <p> Date: ${getTransactionHistoryPage.currentDateTime}</p>
             </div>
         </div>
     `
-    transactionHistoryPage.appendChild(newDiv);
+        getTransactionHistoryPage.transactionHistoryPage.appendChild(getTransactionHistoryPage.newDiv);
 
-    getModalById('modal');
+        getModalById('modal');
+    }
 })
 
 document.getElementById('history-btn').addEventListener('click', function () {
