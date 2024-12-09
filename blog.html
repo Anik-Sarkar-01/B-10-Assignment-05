@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <!-- favicon -->
-    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <!-- css file -->
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <!-- daisyUI css file + tailwind css cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,11 +23,11 @@
                 <a id="home-btn" class="btn btn-md  bg-lime-400 font-bold">Home</a>
             </div>
             <div class="navbar-center flex flex-col lg:flex-row justify-center items-center space-x-3">
-                <img class="w-2/12 lg:w-1/6" src="/assets/logo.png" alt="logo of donate bangladesh">
+                <img class="w-2/12 lg:w-1/6" src="./assets/logo.png" alt="logo of donate bangladesh">
                 <p class="font-bold text-sm lg:text-lg">Donate Bangladesh</p>
             </div>
             <div class="navbar-end flex flex-col lg:flex-row lg:space-x-2">
-                <img src="/assets/coin.png" alt="">
+                <img src="./assets/coin.png" alt="">
                 <p id="total-money-on-account" class="font-semibold text-gray-600">5500</p>
                 <span class="font-semibold text-gray-600">BDT</span>
             </div>
@@ -102,7 +102,7 @@
     <!-- home button functionality -->
     <script>
         document.getElementById('home-btn').addEventListener('click', function () {
-            window.location.href = '../index.html';
+            window.location.href = './index.html';
         })
     </script>
 

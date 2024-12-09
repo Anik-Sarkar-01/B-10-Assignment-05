@@ -107,5 +107,5 @@ document.getElementById("donation-btn").addEventListener('click', function () {
 
 // blog button functionality
 document.getElementById('blog-btn').addEventListener('click', function () {
-    window.location.href = '/blog/index.html';
+    window.location.href = '../blog.html';
 })
